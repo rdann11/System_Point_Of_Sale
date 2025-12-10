@@ -3,6 +3,7 @@ Sebelum melakukan instalasi, pastikan komputer atau server telah memenuhi kebutu
 ●	PHP versi 8.4 atau lebih baru.
 ●	Web Server menggunakan XAMPP / Laragon (atau sejenisnya yang mendukung Apache dan MySQL)
 ●	Database menggunakan MySQL/MariaDB (via XAMPP atau Laragon)
+
 **2** Langkah Instalasi
 Ikuti Langkah-langkah berikut untuk melakukan instalasi proyek:
 1)	Mengunduh Source Code
@@ -35,6 +36,7 @@ Pastikan nama database sama dengan yang dibuat di phpMyAdmin.
 Setelah semua konfigurasi selesai, proyek dapat dijalankan melalui browser dengan format: http://localhost/nama_folder_project
 Contoh: http://localhost/pos_project
 Sistem POS sekarang siap digunakan.
+
 **3**Panduan Penggunaan (Akun Demo)
 Untuk keperluan pengujian sistem, berikut adalah daftar akun default yang telah disediakan berdasarkan hak aksesnya:
 Peran (Role)	Username	Password
