@@ -30,14 +30,21 @@ Karena proyek bersifat PHP native, database harus disiapkan secara manual melalu
 
 3)	Penyesuaian Konfigurasi Koneksi
 Sesuaikan pengaturan koneksi seperti berikut:
+
 $host = "localhost";
+
 $user = "root"; // Ganti dengan user anda
+
 $pass = ""; // Ganti dengan Password anda
+
 $db   = "pos_db"; // Ganti dengan nama database yang telah di buat
+
 Pastikan nama database sama dengan yang dibuat di phpMyAdmin.
-4)	Menjalankan Proyek
+
+5)	Menjalankan Proyek
 Setelah semua konfigurasi selesai, proyek dapat dijalankan melalui browser dengan format: http://localhost/nama_folder_project
 Contoh: http://localhost/pos_project
+
 Sistem POS sekarang siap digunakan.
 
 **3** Panduan Penggunaan (Akun Demo)
