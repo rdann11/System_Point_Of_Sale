@@ -1,7 +1,10 @@
 **1** Kebutuhan Sistem (System Requirements)
 Sebelum melakukan instalasi, pastikan komputer atau server telah memenuhi kebutuhan perangkat lunak berikut:
+
 ●	PHP versi 8.4 atau lebih baru.
+
 ●	Web Server menggunakan XAMPP / Laragon (atau sejenisnya yang mendukung Apache dan MySQL)
+
 ●	Database menggunakan MySQL/MariaDB (via XAMPP atau Laragon)
 
 **2** Langkah Instalasi
@@ -37,8 +40,11 @@ Setelah semua konfigurasi selesai, proyek dapat dijalankan melalui browser denga
 Contoh: http://localhost/pos_project
 Sistem POS sekarang siap digunakan.
 
-**3**Panduan Penggunaan (Akun Demo)
+**3** Panduan Penggunaan (Akun Demo)
 Untuk keperluan pengujian sistem, berikut adalah daftar akun default yang telah disediakan berdasarkan hak aksesnya:
-Peran (Role)	Username	Password
-Admin	admin	admin123
-Kasir	kasir	kasir1234
+
+Peran (Role)
+
+Admin	= user : admin	 pw : admin123
+
+Kasir	= user : kasir   pw :	kasir1234
