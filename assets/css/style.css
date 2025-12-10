@@ -1,0 +1,91 @@
+/* /assets/css/style.css */
+
+/* Styling Dasar untuk Body dan HTML (untuk Sticky Footer) */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimal setinggi viewport */
+    padding-top: 0; /* Reset jika ada padding-top dari contoh Bootstrap lama */
+}
+
+/* Wrapper utama yang berisi sidebar dan konten (untuk Sticky Footer dan Sidebar Toggle) */
+#wrapper {
+    display: flex; /* Ini juga sudah diatur oleh class d-flex Bootstrap */
+    align-items: stretch; /* Membuat sidebar dan konten sama tinggi */
+    flex-grow: 1; /* Membuat wrapper ini mengisi ruang vertikal yang tersedia untuk sticky footer */
+}
+
+/* Sidebar Styling (untuk Sidebar Toggle) */
+#appSidebar {
+    min-width: 280px; 
+    max-width: 280px; 
+    transition: margin-left 0.35s ease-in-out; 
+}
+
+/* Page Content Wrapper Styling (untuk Sidebar Toggle dan layout) */
+#page-content-wrapper {
+    flex-grow: 1; /* Mengisi sisa ruang horizontal di dalam #wrapper */
+    width: 100%; /* Untuk memastikan ia mengambil sisa lebar */
+    /* Transisi margin-left mungkin tidak diperlukan jika hanya sidebar yang bergerak,
+       tapi bisa dipertahankan jika ada efek dorong pada konten */
+    /* transition: margin-left 0.35s ease-in-out; */
+    overflow-x: hidden; /* Mencegah horizontal scrollbar saat transisi sidebar */
+}
+
+/* State ketika sidebar ditutup/toggled */
+#wrapper.toggled #appSidebar {
+    margin-left: -280px; /* Geser sidebar keluar layar sejumlah lebarnya */
+}
+
+/* Tombol toggle di navbar */
+#menu-toggle {
+    border: none;
+}
+#menu-toggle:focus {
+    box-shadow: none;
+}
+
+/* Penyesuaian padding untuk konten di dalam wrapper agar lebih rapi */
+
+
+/* Menghilangkan padding horizontal default dari .container-fluid jika ia anak langsung 
+   dari #content-inside-wrapper agar konten bisa menempel ke tepi jika diinginkan.
+   Sesuaikan jika Anda lebih suka ada padding.
+*/
+#content-inside-wrapper > .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* Responsif: Untuk layar kecil (untuk Sidebar Toggle) */
+@media (max-width: 768px) {
+    #appSidebar {
+        margin-left: -280px; /* Sembunyikan sidebar by default di mobile */
+        position: fixed; /* Agar bisa overlay atau push content */
+        height: 100vh;
+        z-index: 1030; /* Di atas konten lain, di bawah modal Bootstrap jika ada */
+        /* Tambahkan shadow agar terlihat lebih baik saat overlay */
+        /* box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15); */
+    }
+    #wrapper.toggled #appSidebar {
+        margin-left: 0; /* Tampilkan sidebar saat ditoggle di mobile */
+    }
+    
+    /* Jika Anda ingin konten utama terdorong saat sidebar mobile terbuka (bukan overlay)
+       Anda bisa uncomment dan sesuaikan CSS di bawah ini untuk #page-content-wrapper
+       Namun, ini bisa lebih kompleks untuk diatur agar sempurna.
+       Untuk sekarang, sidebar akan overlay di mobile.
+    */
+    /*
+    #wrapper.toggled #page-content-wrapper {
+        margin-left: 280px; 
+    }
+    */
+}
+
+/* Anda bisa menambahkan styling kustom lainnya untuk tabel, form, kartu, dll. di bawah ini */
